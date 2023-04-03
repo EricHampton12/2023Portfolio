@@ -1,6 +1,5 @@
 import React from "react";
 // images
-import Image from "../assets/avatar.svg";
 // icons
 import { FaGithub, FaLinkedin, FaInstagram, FaLink } from "react-icons/fa";
 // type animation
@@ -102,7 +101,6 @@ const Banner = () => {
             whileInView={"show"}
             className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]"
           >
-            <img src={Image} alt="" />
           </motion.div>
         </div>
       </div>

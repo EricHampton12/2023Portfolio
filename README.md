@@ -1,3 +1,7 @@
+This application was built to help connect new developers in the industry with seasoned developers to experience real-world interview scenarios. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
