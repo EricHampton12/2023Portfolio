@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 // img
 import Img1 from "../assets/project1.png";
-import Img2 from "../assets/project2.png";
+import Img2 from "../assets/MockPros.png";
 import Img3 from "../assets/project3.png";
 
 const Work = () => {
@@ -65,8 +65,11 @@ const Work = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex flex-col gap-y-10"
           >
-            {/* image */}
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+             <p> Test UserName: johnsmith@test.com <br />
+                 Test Password: testing123!
+              </p>
+          
+              <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
               {/* img */}
@@ -75,20 +78,21 @@ const Work = () => {
                 src={Img2}
                 alt=""
               />
+              
               {/* pretitle */}
               <a
-                href="https://ebook-427a9.web.app/"
+                href="https://mockitpros.com/"
                 className="absolute-bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 cursor-pointer"
               >
-                <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
+                <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50" target="_blank">
                   <span className="text-gradient">
-                    React/Redux/Firebase Hosting
+                    MERN Full Stack     <br />         
                   </span>
                 </div>
               </a>
               {/* title */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Facebook Clone</span>
+                <span className="text-3xl text-white">MockPros</span>         
               </div>
             </div>
             {/* image */}
