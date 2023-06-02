@@ -81,7 +81,7 @@ const Work = () => {
               
               {/* pretitle */}
               <a
-                href="https://mockitpros.com/"
+                // href="https://mockitpros.com/"
                 className="absolute-bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50 cursor-pointer"
               >
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50" target="_blank">
