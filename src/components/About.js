@@ -15,7 +15,7 @@ const About = () => {
   return (
     <section className="section" id="about" ref={ref}>
       <div className="container mx-auto">
-        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen rounded-full overflow-hidden">
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen ${window.innerWidth < 640 ? 'rounded-none' : 'rounded-full'} overflow-hidden`}" >
           {/* img */}
           <motion.div
             variants={fadeIn("right", 0.3)}

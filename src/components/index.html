@@ -1,0 +1,45 @@
+<div data-at="timer-bottom-labels" href="" srcset="" data-secondsdelay="" class="timer-labels timer-labels-bottom hidden-mobile" id="countdown">
+  <div data-text="text" data-at="timer-days" href="" srcset="" data-secondsdelay="" class="timer-column timer-label timer-days"> days </div>
+  <div data-text="text" data-at="timer-hours" href="" srcset="" data-secondsdelay="" class="timer-column timer-label timer-hours"> hours </div>
+  <div data-text="text" data-at="timer-minutes" href="" srcset="" data-secondsdelay="" class="timer-column timer-label timer-minutes"> minutes </div>
+  <div data-text="text" data-at="timer-seconds" href="" srcset="" data-secondsdelay="" class="timer-column timer-label timer-seconds"> seconds </div>
+  <div data-text="text" href="" srcset="" data-secondsdelay="" class="clearfix"></div>
+</div>
+
+<script>
+  // Set the target date and time
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 26);
+  targetDate.setHours(targetDate.getHours() + 10);
+  targetDate.setMinutes(targetDate.getMinutes() + 14);
+  targetDate.setSeconds(targetDate.getSeconds() + 1); // Add 1 second to account for the delay in code execution
+
+  // Get the countdown container element
+  const countdownContainer = document.getElementById('countdown');
+
+  // Update the countdown every second
+  const countdownInterval = setInterval(() => {
+    // Calculate the remaining time
+    const now = new Date();
+    const remainingTime = targetDate.getTime() - now.getTime();
+
+    // If the remaining time is less than or equal to zero, clear the interval and update the container text
+    if (remainingTime <= 0) {
+      clearInterval(countdownInterval);
+      countdownContainer.innerText = 'Countdown complete!';
+      return;
+    }
+
+    // Calculate the remaining days, hours, minutes, and seconds
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+    // Update the container text with the remaining time
+    countdownContainer.children[0].innerText = `${days}`;
+    countdownContainer.children[1].innerText = `${hours}`;
+    countdownContainer.children[2].innerText = `${minutes}`;
+    countdownContainer.children[3].innerText = `${seconds}`;
+  }, 1000); // Update every second
+</script>

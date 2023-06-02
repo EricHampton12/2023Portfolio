@@ -11,7 +11,9 @@ const Header = () => {
             HOME
           </a>
           {/* button */}
-          <button className="btn btn-sm">Work with me</button>
+          <a className="text-[30px] font-bold" href="#contact">
+          <button className="btn btn-sm">
+          Work with me</button></a>
         </div>
       </div>
     </header>
